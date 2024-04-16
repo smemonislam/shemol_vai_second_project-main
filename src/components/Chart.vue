@@ -12,7 +12,7 @@ onMounted(() => {
   const ctx = document.getElementById('myChart');
 
   const txtColor = 'rgba(255, 26, 104, 1)';
-  const labels = ['Red', 'Blue', 'Yellow'];
+  const labels = ['Red %', 'Blue %', 'Yellow %'];
   const bgColor = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'];
   const align = 'center';
   const font = 'bolder 30px Arial';
@@ -33,8 +33,6 @@ onMounted(() => {
     }
   }
 
-  
-
   new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -44,7 +42,8 @@ onMounted(() => {
         data: [300, 50, 100],
         backgroundColor: bgColor,
         hoverOffset: 4,
-        cutout: '80%'
+        cutout: '80%',
+        borderRadius: 5
       }]
     },
     options: {
